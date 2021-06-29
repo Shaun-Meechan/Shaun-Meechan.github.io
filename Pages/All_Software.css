@@ -9,3 +9,7 @@
 .nav li {
   display: inline;
 }
+
+#myCarousel {
+    padding-bottom: 10px;
+}
