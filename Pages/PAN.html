@@ -4,17 +4,28 @@
     <meta charset="utf-8">
     <title>Hello, World! - A-Frame</title>
     <meta name="description" content="Hello, World! - A-Frame">
-    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-    <script src="../Scripts/aframe-master.js"></script>
+    <script src="Scripts/aframe-master.js"></script>
+    <script src="Scripts/aframe-tooltip-component.js"></script>
+    <script src="Scripts/camera-position.js"></script>
+    <script src="Scripts/link-controls.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+    <script src="Scripts/info-message.js"></script>
 </head>
 
 <body>
 
-    <a-scene cursor="rayOrigin: mouse">
-        <a-sky src="../Images/Artboard.jpg" rotation="0 -90 0"></a-sky>
+    <a-scene raycaster="far: 100; objects: [link];"
+             cursor="rayOrigin: mouse"
+             camera-position
+        <a-assets>
+            <a-asset-item id="messageText" src="message.html"></a-asset-item>
+            <img id="thumbJapan" crossOrigin="anonymous" src="https://cdn.aframe.io/link-traversal/thumbs/japan.png">
+            <a-asset-item id="messageText" src="message.html"></a-asset-item>
+        </a-assets>
+
+        <a-sky src="Images/Artboard.jpg" rotation="0 -90 0"></a-sky>
         <a-box position="0 0 -2" color="blue"></a-box>
-        <a-entity position="0 1.6 -2"
-                  link="highlighted: true; highlightedColor:#000000; backgroundColor: red; href: https://schatzkin.com; titleColor: black; title: Back to website;image: Images/Artboard.jpg  "></a-entity>
+        <a-link href="https://www.google.com" position="0 1.5 -2.0" image="Images/Logo.jpg" title="Something" titleColor="black"></a-link>
     </a-scene>
 </body>
 </html>
