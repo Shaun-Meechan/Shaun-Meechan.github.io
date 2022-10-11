@@ -12,7 +12,7 @@
 
 .jumbotron {
   background-image:url();
-  height: 200px;
+  height: auto;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -53,4 +53,10 @@ color: #000000;
 
 .learn-more a {
   color: #00b0ff;
+}
+
+.column{
+  float: left;
+  width: 50%;
+  padding-right: 10%;
 }
