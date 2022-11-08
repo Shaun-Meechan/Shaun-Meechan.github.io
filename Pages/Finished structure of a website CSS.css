@@ -55,8 +55,18 @@ color: #000000;
   color: #00b0ff;
 }
 
+.column-l{
+  float: left;
+  width: 50%;
+}
+
+.column-r{
+  float: right;
+  width: 50%;
+}
+
 .column{
   float: left;
   width: 50%;
-  padding-right: 10%;
+  padding-right: auto;
 }
