@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html lang="en">
+<head>
+	<Title>Shadow Play</Title>
+	<link href="bootstrap.css" rel="stylesheet">
+	<link href="All_Software.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="nav">
+	  <div class="container">
+		<ul class="pull-left">
+		  <li><a href="../index.html">Home</a></li>
+		  <li><a href="Contact.html">Contact</a></li>
+		</ul>
+	  </div>
+</div>
+ <div class="jumbotron">
+	  <div class="container">
+		<h1 style="text-align: center;">Shadow Play</h1>
+	  </div>
+</div> 
+ <div class="software">
+	 <div class="container">
+		 <div class="row">
+			 <div class="Title">
+				 <p>This game was created as the fianl part of my masters course.</a></p>
+				 <p>
+					In this module we were presented with breifs from industry clients. We were tasked with creating a game around synchronicity. As such we created a puzzle game where you place 'clones'
+					In locations around the world who, when trigged, will interact with the objects. Doing actions in a certain order will allow you to solve the puzzle and progress through the game.
+					For this project I created:
+				</p>
+				<ul>
+					<li>Object system: Object were children of a abstract base class where they would implement their own 'action' function. This simplified the interaction and collision systems.
+						<a href="https://gist.github.com/Shaun-Meechan/762358db76191e68e47a0a619b7016c6"> Code example</a></li>
+					<li>Input switching system: Our client requested that we support controllers as well as keyboard and mouse. As such we needed a way to allow a user to switch seamlessly between the two.
+						This was achived by having a static class with events detect the input then alert subscribers the input has changed so they can react accordingly. An example being the tutorial images.
+						I had never created my own event handlers/event system before so in researching how to do it I turned to ChatGPT for examples. As such some of the GlobalData script is based on AI code.
+						<a href="https://gist.github.com/Shaun-Meechan/bdadfb56fe1c8d02872281d664d0fe1b"> Code example</a></li>
+					<li>Verticality system: The designers wanted the game to support multiple 'floors' to create more intricate levels. This was created in a designer friendly manner that just involves them
+						adding the objects to 'layers' in the Unity editor. The code tracks what layer the player is on and ensure that the don't collide with objects above or below them. It handles stairs along
+						with the ability to fall off object onto a layer below. <a href="https://gist.github.com/Shaun-Meechan/bd6bfa5017fb5cbf64ad96ffff217836"> Code example</a></li>
+				</ul>
+					For this project I was the main progammer and focused on creating game systems based on designs from the design team. I also helped import and implement art assets and animations from the art team.
+				</p>
+			 </div>
+			 <div class="col-md-8"><h20><b>DOWNLOADS</b></h20>
+				<p>	As this project was created with a team I am not at liberty to distribute the source code but a build is avaliable here.</p>
+				<iframe src="https://onedrive.live.com/embed?resid=7B877F8FC2AFEBAE%21165861&authkey=!AFf-N8qxk36oEAQ" width="98" height="120" frameborder="0" scrolling="no"></iframe>
+			 </div>
+			<div class="col-md-4"><h20><b>Video</b></h20>
+				<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4oufNaX17Nc?si=jOb5ISIM0KIK_imw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+		<!-- row class div close -->
+		</div>
+	 <!-- contanier class div close -->
+	</div>
+</div>
+</body>
+</html>
